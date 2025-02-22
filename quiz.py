@@ -1,8 +1,5 @@
 import json
 import random
-import scores
-
-scores
 
 # Load questions from JSON file
 def load_questions():
