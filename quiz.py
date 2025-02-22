@@ -1,5 +1,6 @@
 import json
 import random
+import sqlite3
 
 # Load questions from JSON file
 def load_questions():
