@@ -20,7 +20,7 @@ def ask_questions(questions):
             print(f"{i}. {option}")
 
         try:
-            user_answer = int(input("Enter your choice (1-4): "))
+            user_answer = int(input("Enter your choice (1 - 4): "))
             if question["options"][user_answer - 1] == question["answer"]:
                 print("✅ Correct!")
                 score += 1

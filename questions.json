@@ -1,22 +1,22 @@
 [
     {
         "question": "What is the capital of Bangladesh?",
-        "options": ["A) Dhaka", "B) Chittagong", "C) Khulna", "D) Rajshahi"],
-        "answer": "A"
+        "options": ["1) Dhaka", "2) Chittagong", "3) Khulna", "4) Rajshahi"],
+        "answer": "1"
     },
     {
         "question": "Which planet is known as the Red Planet?",
-        "options": ["A) Earth", "B) Mars", "C) Jupiter", "D) Venus"],
-        "answer": "B"
+        "options": ["1) Earth", "2) Mars", "3) Jupiter", "4) Venus"],
+        "answer": "2"
     },
     {
         "question": "How many Jupiters can fit in the Sun?",
-        "options": ["A) 100", "B) 500", "C) 1000", "D) 1300"],
-        "answer": "D"
+        "options": ["1) 100", "2) 500", "3) 1000", "4) 1300"],
+        "answer": "4"
     },
     {
         "question": "Who wrote 'Macbeth'?",
-        "options": ["A) Charles Dickens", "B) J.K. Rowling", "C) William Shakespeare", "D) Mark Twain"],
-        "answer": "C"
+        "options": ["1) Charles Dickens", "2) J.K. Rowling", "3) William Shakespeare", "4) Mark Twain"],
+        "answer": "3"
     }
 ]
