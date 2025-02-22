@@ -1,0 +1,25 @@
+import json
+
+def create_questions_file():
+    questions = [
+        {"question": "What is the capital of Bangladesh?", "options": ["A) Dhaka", "B) Chittagong", "C) Khulna", "D) Rajshahi"], "answer": "A"},
+        {"question": "Which planet is known as the Red Planet?", "options": ["A) Earth", "B) Mars", "C) Jupiter", "D) Venus"], "answer": "B"},
+        {"question": "How many Jupiters can fit in the Sun?", "options": ["A) 100", "B) 500", "C) 1000", "D) 1300"], "answer": "D"},
+        {"question": "Who wrote 'Macbeth'?", "options": ["A) Charles Dickens", "B) J.K. Rowling", "C) William Shakespeare", "D) Mark Twain"], "answer": "C"}
+    ]
+    
+    with open("questions.json", "w") as file:
+        json.dump(questions, file, indent=4)
+    print("questions.json has been created successfully!")
+
+def load_questions():
+    try:
+        with open("questions.json", "r") as file:
+            questions = json.load(file)
+        return questions
+    except FileNotFoundError:
+        print("Error: questions.json not found. Run create_questions_file() first.")
+        return []
+
+# Uncomment to create the JSON file
+# create_questions_file()
