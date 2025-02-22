@@ -1,6 +1,5 @@
 import json
 import random
-import sqlite3
 
 # Load questions from JSON file
 def load_questions():
@@ -26,9 +25,9 @@ def ask_questions(questions):
             chosen_option = question["options"][user_answer - 1].strip().lower()
             correct_answer = question["answer"].strip().lower()
 
-            # Debugging prints (uncomment if needed)
-            # print(f"DEBUG: User chose {chosen_option}")
-            # print(f"DEBUG: Correct answer is {correct_answer}")
+            # Debugging prints
+            print(f"DEBUG: User chose → '{chosen_option}'")
+            print(f"DEBUG: Correct answer → '{correct_answer}'")
 
             if chosen_option == correct_answer:
                 print("✅ Correct!")
