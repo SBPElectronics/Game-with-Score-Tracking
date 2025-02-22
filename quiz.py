@@ -22,20 +22,18 @@ def ask_questions(questions):
 
         try:
             user_answer = int(input("Enter your choice (1-4): "))
-            chosen_option = question["options"][user_answer - 1].strip().lower()
-            correct_answer = question["answer"].strip().lower()
+            chosen_option = question["options"][user_answer - 1].strip()  # Get full answer text
+            correct_answer = question["answer"].strip()  # Compare full answer
 
-            # Debugging prints
-            print(f"DEBUG: User chose → '{chosen_option}'")
-            print(f"DEBUG: Correct answer → '{correct_answer}'")
+            # Debugging prints (if still broken, uncomment these)
+            # print(f"DEBUG: User chose → '{chosen_option}'")
+            # print(f"DEBUG: Correct answer → '{correct_answer}'")
 
             if chosen_option == correct_answer:
-                print(f"❌ Wrong! The correct answer was: {question['answer']}")
-                
-            else:
                 print("✅ Correct!")
                 score += 1
-                
+            else:
+                print(f"❌ Wrong! The correct answer was: {question['answer']}")
         except (ValueError, IndexError):
             print("⚠️ Invalid input! Please enter a number between 1 and 4.")
 
