@@ -30,10 +30,12 @@ def ask_questions(questions):
             print(f"DEBUG: Correct answer → '{correct_answer}'")
 
             if chosen_option == correct_answer:
+                print(f"❌ Wrong! The correct answer was: {question['answer']}")
+                
+            else:
                 print("✅ Correct!")
                 score += 1
-            else:
-                print(f"❌ Wrong! The correct answer was: {question['answer']}")
+                
         except (ValueError, IndexError):
             print("⚠️ Invalid input! Please enter a number between 1 and 4.")
 
