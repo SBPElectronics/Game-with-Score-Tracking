@@ -2,12 +2,14 @@ import json
 import random
 import sqlite3
 
-#checking if working
-
 # Load questions from JSON file
 def load_questions():
-    with open("questions.json", "r") as file:
-        return json.load(file)
+    try:
+        with open("questions.json", "r") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("❌ Error: questions.json is missing or incorrectly formatted!")
+        return []
 
 # Ask questions and get user input
 def ask_questions(questions):
@@ -20,8 +22,15 @@ def ask_questions(questions):
             print(f"{i}. {option}")
 
         try:
-            user_answer = int(input("Enter your choice (1 - 4): "))
-            if question["options"][user_answer - 1] == question["answer"]:
+            user_answer = int(input("Enter your choice (1-4): "))
+            chosen_option = question["options"][user_answer - 1].strip().lower()
+            correct_answer = question["answer"].strip().lower()
+
+            # Debugging prints (uncomment if needed)
+            # print(f"DEBUG: User chose {chosen_option}")
+            # print(f"DEBUG: Correct answer is {correct_answer}")
+
+            if chosen_option == correct_answer:
                 print("✅ Correct!")
                 score += 1
             else:
@@ -35,6 +44,11 @@ def ask_questions(questions):
 def main():
     print("🎯 Welcome to the Quiz Game!")
     questions = load_questions()
+    
+    if not questions:
+        print("⚠️ No questions found! Please check questions.json.")
+        return
+
     score = ask_questions(questions)
     print(f"\n🏆 You scored {score} out of {len(questions)}!")
 
