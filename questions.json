@@ -2,21 +2,21 @@
     {
         "question": "What is the capital of Bangladesh?",
         "options": ["1) Dhaka", "2) Chittagong", "3) Khulna", "4) Rajshahi"],
-        "answer": "1"
+        "answer": "1) Dhaka"
     },
     {
         "question": "Which planet is known as the Red Planet?",
         "options": ["1) Earth", "2) Mars", "3) Jupiter", "4) Venus"],
-        "answer": "2"
+        "answer": "2) Mars"
     },
     {
         "question": "How many Jupiters can fit in the Sun?",
         "options": ["1) 100", "2) 500", "3) 1000", "4) 1300"],
-        "answer": "4"
+        "answer": "4) 1300"
     },
     {
         "question": "Who wrote 'Macbeth'?",
         "options": ["1) Charles Dickens", "2) J.K. Rowling", "3) William Shakespeare", "4) Mark Twain"],
-        "answer": "3"
+        "answer": "3) William Shakespeare"
     }
 ]
