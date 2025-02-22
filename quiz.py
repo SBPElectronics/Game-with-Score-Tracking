@@ -1,6 +1,8 @@
 import json
 import random
 
+#checking if working
+
 # Load questions from JSON file
 def load_questions():
     with open("questions.json", "r") as file:
