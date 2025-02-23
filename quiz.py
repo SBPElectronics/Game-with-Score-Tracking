@@ -1,7 +1,6 @@
 import json
 import random
 import sqlite3
-from datetime import datetime
 
 # Database connection
 conn = sqlite3.connect("quiz_scores.db")
@@ -11,9 +10,8 @@ cursor = conn.cursor()
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS scores (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        player_name TEXT UNIQUE,  -- Prevent duplicate names
-        score INTEGER,
-        timestamp TEXT
+        player_name TEXT,
+        score INTEGER
     )
 """)
 conn.commit()
@@ -52,55 +50,35 @@ def ask_questions(questions):
 
     return score
 
-# Ensure the player's name is unique
-def get_unique_name():
-    while True:
-        player_name = input("Enter your name: ").strip()
-
-        cursor.execute("SELECT player_name FROM scores WHERE player_name = ?", (player_name,))
-        existing = cursor.fetchone()
-
-        if existing:
-            print("⚠️ This name is already taken! Please choose a different one.")
-        else:
-            return player_name
-
 # Save score to database
 def save_score(player_name, score):
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Current time
-
-    try:
-        cursor.execute("INSERT INTO scores (player_name, score, timestamp) VALUES (?, ?, ?)", 
-                       (player_name, score, timestamp))
-        conn.commit()
-    except sqlite3.IntegrityError:
-        print("❌ Error: This name is already taken!")
+    cursor.execute("INSERT INTO scores (player_name, score) VALUES (?, ?)", (player_name, score))
+    conn.commit()
 
 # Display high scores
 def display_high_scores():
-    cursor.execute("SELECT player_name, score, timestamp FROM scores ORDER BY score DESC, timestamp ASC LIMIT 5")
+    cursor.execute("SELECT player_name, score FROM scores ORDER BY score DESC LIMIT 5")
     scores = cursor.fetchall()
 
     print("\n🏆 High Scores 🏆")
-    for rank, (player, score, time) in enumerate(scores, start=1):
-        print(f"{rank}. {player} - {score} points ({time})")
+    for rank, (player, score) in enumerate(scores, start=1):
+        print(f"{rank}. {player}: {score} points")
 
 # Print the entire database
 def print_full_database():
-    cursor.execute("SELECT * FROM scores ORDER BY score DESC, timestamp ASC")
+    cursor.execute("SELECT * FROM scores ORDER BY score DESC")
     scores = cursor.fetchall()
 
     print("\n📜 FULL SCORE DATABASE 📜")
     for row in scores:
-        print(f"ID: {row[0]}, Player: {row[1]}, Score: {row[2]}, Time: {row[3]}")
+        print(f"ID: {row[0]}, Player: {row[1]}, Score: {row[2]}")
 
 # Main function
 def main():
     print("🎯 Welcome to the Quiz Game!")
+    player_name = input("Enter your name: ")
 
-    player_name = get_unique_name()
     questions = load_questions()
-    
     if not questions:
         print("⚠️ No questions found! Please check questions.json.")
         return
