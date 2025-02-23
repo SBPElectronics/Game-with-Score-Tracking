@@ -2,11 +2,11 @@
     "script": [
         "import sqlite3",
         "",
-        "# Connect to database (or create it if not exists)",
+        "# Connect to database",
         "conn = sqlite3.connect(\"quiz_scores.db\")",
         "cursor = conn.cursor()",
         "",
-        "# Create table for scores",
+        "# Create scores table if not exists",
         "cursor.execute(\"\"\"CREATE TABLE IF NOT EXISTS scores (",
         "    id INTEGER PRIMARY KEY AUTOINCREMENT,",
         "    player_name TEXT,",
@@ -26,6 +26,15 @@
         "",
         "    print(\"\\n🏆 High Scores 🏆\")",
         "    for rank, (player, score) in enumerate(scores, start=1):",
-        "        print(f\"{rank}. {player}: {score} points\")"
+        "        print(f\"{rank}. {player}: {score} points\")",
+        "",
+        "# Print the entire database",
+        "def print_full_database():",
+        "    cursor.execute(\"SELECT * FROM scores ORDER BY score DESC\")",
+        "    scores = cursor.fetchall()",
+        "",
+        "    print(\"\\n📜 FULL SCORE DATABASE 📜\")",
+        "    for row in scores:",
+        "        print(f\"ID: {row[0]}, Player: {row[1]}, Score: {row[2]}\")"
     ]
 }
