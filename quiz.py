@@ -91,18 +91,42 @@ def print_full_database():
 # Main function to start the game
 def main():
     print("🎯 Welcome to the Quiz Game!")
-    questions = load_questions()
     
-    if not questions:
-        print("⚠️ No questions available! Please check 'questions.json'.")
-        return
+    # Display menu with options
+    print("\nPlease choose an option:")
+    print("1. Take the Quiz")
+    print("2. View the Leaderboard")
+    
+    try:
+        choice = int(input("\nEnter 1 or 2: "))
+        
+        if choice == 1:
+            # Load questions
+            questions = load_questions()
+            
+            if not questions:
+                print("⚠️ No questions available! Please check 'questions.json'.")
+                return
+            
+            # Ask questions and calculate the score
+            score = ask_questions(questions)
+            print(f"\n🏆 Your score is {score} out of {len(questions)}!")
+            
+            # Ask for player's name and save score
+            player_name = input("\nEnter your name: ").strip()
+            save_score(player_name, score)
+            print("\nYour score has been saved!")
+        
+        elif choice == 2:
+            # Display high scores
+            display_high_scores()
+        
+        else:
+            print("⚠️ Invalid choice! Please enter 1 or 2.")
+            
+    except ValueError:
+        print("⚠️ Invalid input! Please enter a number (1 or 2).")
 
-    score = ask_questions(questions)
-    print(f"\n🏆 Your score is {score} out of {len(questions)}!")
-
-    player_name = input("\nEnter your name: ").strip()  # Ask for player's name after the quiz is done
-    save_score(player_name, score)
-    display_high_scores()
 
 if __name__ == "__main__":
     initialize_scores()  # Ensure the scores file exists and is initialized

@@ -15,6 +15,14 @@
         {
             "player_name": "3",
             "score": 2
+        },
+        {
+            "player_name": "2",
+            "score": 1
+        },
+        {
+            "player_name": "2",
+            "score": 1
         }
     ],
     "script": [
