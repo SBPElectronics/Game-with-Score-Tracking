@@ -11,6 +11,10 @@
         {
             "player_name": "s",
             "score": 4
+        },
+        {
+            "player_name": "3",
+            "score": 2
         }
     ],
     "script": [
