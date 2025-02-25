@@ -4,7 +4,7 @@ import random
 # Function to load questions from the JSON file
 def load_questions():
     try:
-        with open("questions.json", "r", encoding="utf-8") as file:
+        with open("questions.json", "r") as file:
             return json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         print("❌ Error: 'questions.json' is either missing or incorrectly formatted!")
@@ -15,7 +15,10 @@ def ask_questions(questions):
     score = 0
     random.shuffle(questions)  # Shuffle the question order
 
-    for question in questions:
+    # Select the first 5 random questions
+    selected_questions = questions[:5]
+
+    for question in selected_questions:
         print("\n" + question["question"])
         for i, option in enumerate(question["options"], 1):
             print(f"{i}. {option}")
@@ -35,17 +38,7 @@ def ask_questions(questions):
 
     return score
 
-# Function to initialize scores.json if it's missing or corrupted
-def initialize_scores():
-    try:
-        with open("scores.json", "r", encoding="utf-8") as file:
-            json.load(file)  # Check if JSON is valid
-    except (FileNotFoundError, json.JSONDecodeError):
-        # Create an empty structure if file doesn't exist or is corrupted
-        with open("scores.json", "w", encoding="utf-8") as file:
-            json.dump({"score_list": []}, file, indent=4)
-
-# Function to save a player's score to the JSON file
+# Function to save player's score to scores.json
 def save_score(player_name, score):
     try:
         with open("scores.json", "r", encoding="utf-8") as file:
@@ -60,7 +53,7 @@ def save_score(player_name, score):
     with open("scores.json", "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
 
-# Function to display top 5 high scores
+# Function to display high scores from scores.json
 def display_high_scores():
     try:
         with open("scores.json", "r", encoding="utf-8") as file:
@@ -75,22 +68,9 @@ def display_high_scores():
     for rank, entry in enumerate(scores, start=1):
         print(f"{rank}. {entry['player_name']}: {entry['score']} points")
 
-# Function to print the full score database
-def print_full_database():
-    try:
-        with open("scores.json", "r", encoding="utf-8") as file:
-            data = json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
-        print("\n⚠️ No scores available!")
-        return
-
-    print("\n📜 FULL SCORE DATABASE 📜")
-    for entry in sorted(data["score_list"], key=lambda x: x["score"], reverse=True):
-        print(f"Player: {entry['player_name']}, Score: {entry['score']}")
-
 # Main function to start the game
 def main():
-    print("🎯 Welcome to the Quiz Game!")
+    print("🎯 Welcome to the Islamic Quiz Game!")
     
     # Display menu with options
     print("\nPlease choose an option:")
@@ -110,7 +90,7 @@ def main():
             
             # Ask questions and calculate the score
             score = ask_questions(questions)
-            print(f"\n🏆 Your score is {score} out of {len(questions)}!")
+            print(f"\n🏆 Your score is {score} out of 5!")
             
             # Ask for player's name and save score
             player_name = input("\nEnter your name: ").strip()
@@ -127,7 +107,6 @@ def main():
     except ValueError:
         print("⚠️ Invalid input! Please enter a number (1 or 2).")
 
-
+# Run the program
 if __name__ == "__main__":
-    initialize_scores()  # Ensure the scores file exists and is initialized
     main()

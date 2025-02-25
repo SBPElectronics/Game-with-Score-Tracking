@@ -1,22 +1,362 @@
 [
     {
-        "question": "What is the capital of Bangladesh?",
-        "options": ["1) Dhaka", "2) Chittagong", "3) Khulna", "4) Rajshahi"],
-        "answer": "1) Dhaka"
+        "question": "Who is the last Prophet in Islam?",
+        "options": [
+            "1) Prophet Ibrahim (Abraham)",
+            "2) Prophet Musa (Moses)",
+            "3) Prophet Muhammad (PBUH)",
+            "4) Prophet Isa (Jesus)"
+        ],
+        "answer": "3) Prophet Muhammad (PBUH)"
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "options": ["1) Earth", "2) Mars", "3) Jupiter", "4) Venus"],
-        "answer": "2) Mars"
+        "question": "What is the holy book of Islam?",
+        "options": [
+            "1) Bible",
+            "2) Torah",
+            "3) Quran",
+            "4) Vedas"
+        ],
+        "answer": "3) Quran"
     },
     {
-        "question": "How many Jupiters can fit in the Sun?",
-        "options": ["1) 100", "2) 500", "3) 1000", "4) 1300"],
-        "answer": "4) 1300"
+        "question": "In which month do Muslims of all 12 months?",
+        "options": [
+            "1) Muharram",
+            "2) Sha'ban",
+            "3) Ramadan",
+            "4) Dhul-Hijjah"
+        ],
+        "answer": "3) Ramadan"
     },
     {
-        "question": "Who wrote 'Macbeth'?",
-        "options": ["1) Charles Dickens", "2) J.K. Rowling", "3) William Shakespeare", "4) Mark Twain"],
-        "answer": "3) William Shakespeare"
+        "question": "What is the direction Muslims face when they pray?",
+        "options": [
+            "1) Towards Jerusalem",
+            "2) Kaaba in Mecca",
+            "3) To any mosque",
+            "4) Where they want"
+        ],
+        "answer": "3) Kaaba in Mecca"
+    },
+    {
+        "question": "Which city is the birthplace of Prophet Muhammad (PBUH)?",
+        "options": [
+            "1) Medina",
+            "2) Mecca",
+            "3) Jerusalem",
+            "4) Cairo"
+        ],
+        "answer": "2) Mecca"
+    },
+    {
+        "question": "What is the name of the first mosque built in Islam?",
+        "options": [
+            "1) Al-Aqsa Mosque",
+            "2) The Great Mosque of Damascus",
+            "3) Al-Masjid al-Nabawi",
+            "4) Quba Mosque"
+        ],
+        "answer": "4) Quba Mosque"
+    },
+    {
+        "question": "What is the term used for the pilgrimage to Mecca?",
+        "options": [
+            "1) Sadaqah",
+            "2) Hajj",
+            "3) Zakat",
+            "4) Ramadan"
+        ],
+        "answer": "2) Hajj"
+    },
+    {
+        "question": "Which companion of the Prophet Muhammad (PBUH) was known as the 'Sword of Allah'?",
+        "options": [
+            "1) Abu Bakr",
+            "2) Umar ibn al-Khattab",
+            "3) Khalid ibn al-Walid",
+            "4) Uthman ibn Affan"
+        ],
+        "answer": "3) Khalid ibn al-Walid"
+    },
+    {
+        "question": "Which angel is responsible for delivering Allah's messages to the Prophets?",
+        "options": [
+            "1) Jibril (Gabriel)",
+            "2) Mikail (Michael)",
+            "3) Israfil (Raphael)",
+            "4) Azrael (Angel of Death)"
+        ],
+        "answer": "1) Jibril (Gabriel)"
+    },
+    {
+        "question": "Which day is considered the most sacred day of the week for Muslims?",
+        "options": [
+            "1) Friday",
+            "2) Monday",
+            "3) Saturday",
+            "4) Sunday"
+        ],
+        "answer": "1) Friday"
+    },
+    {
+        "question": "What is the name of the night journey of Prophet Muhammad (PBUH)?",
+        "options": [
+            "1) Isra and Miraj",
+            "2) Badr",
+            "3) Uhud",
+            "4) Ghazwat al-Khandaq"
+        ],
+        "answer": "1) Isra and Miraj"
+    },
+    {
+        "question": "Which of the following is one of the Five Pillars of Islam?",
+        "options": [
+            "1) Fasting",
+            "2) Prayer",
+            "3) Hajj",
+            "4) All of the above"
+        ],
+        "answer": "4) All of the above"
+    },
+    {
+        "question": "Which companion of the Prophet Muhammad (PBUH) was the first caliph of Islam?",
+        "options": [
+            "1) Ali ibn Abi Talib",
+            "2) Umar ibn al-Khattab",
+            "3) Abu Bakr al-Siddiq",
+            "4) Uthman ibn Affan"
+        ],
+        "answer": "3) Abu Bakr al-Siddiq"
+    },
+    {
+        "question": "Which Islamic month marks the beginning of the Islamic lunar calendar?",
+        "options": [
+            "1) Shawwal",
+            "2) Rajab",
+            "3) Muharram",
+            "4) Safar"
+        ],
+        "answer": "3) Muharram"
+    },
+    {
+        "question": "What is the name of the Islamic prayer performed before dawn?",
+        "options": [
+            "1) Isha",
+            "2) Fajr",
+            "3) Zuhr",
+            "4) Asr"
+        ],
+        "answer": "2) Fajr"
+    },
+    {
+        "question": "Who is known as the 'Mother of the Believers' in Islam?",
+        "options": [
+            "1) Fatimah",
+            "2) Aisha",
+            "3) Khadijah",
+            "4) Maryam"
+        ],
+        "answer": "2) Aisha"
+    },
+    {
+        "question": "What is the name of the mountain where Prophet Muhammad (PBUH) received the first revelation from Allah?",
+        "options": [
+            "1) Mount Uhud",
+            "2) Mount Sinai",
+            "3) Mount Hira",
+            "4) Mount Tabor"
+        ],
+        "answer": "3) Mount Hira"
+    },
+    {
+        "question": "What is the meaning of the word 'Islam'?",
+        "options": [
+            "1) Peace",
+            "2) Submission",
+            "3) Faith",
+            "4) Light"
+        ],
+        "answer": "2) Submission"
+    },
+    {
+        "question": "What is the name of the first wife of Prophet Muhammad (PBUH)?",
+        "options": [
+            "1) Aisha",
+            "2) Fatimah",
+            "3) Khadijah",
+            "4) Zaynab"
+        ],
+        "answer": "3) Khadijah"
+    },
+    {
+        "question": "Which country has the largest Muslim population in the world?",
+        "options": [
+            "1) Egypt",
+            "2) Saudi Arabia",
+            "3) Indonesia",
+            "4) Pakistan"
+        ],
+        "answer": "3) Indonesia"
+    },
+    {
+        "question": "What is the name of the Islamic holiday that marks the end of Ramadan?",
+        "options": [
+            "1) Eid al-Fitr",
+            "2) Eid al-Adha",
+            "3) Muharram",
+            "4) Ashura"
+        ],
+        "answer": "1) Eid al-Fitr"
+    },
+    {
+        "question": "What is the Arabic term for charity in Islam?",
+        "options": [
+            "1) Zakat",
+            "2) Sadaqah",
+            "3) Hajj",
+            "4) Fitr"
+        ],
+        "answer": "2) Sadaqah"
+    },
+    {
+        "question": "What is the term used for the annual tax given to the poor in Islam?",
+        "options": [
+            "1) Zakat",
+            "2) Sadaqah",
+            "3) Fitr",
+            "4) Khums"
+        ],
+        "answer": "1) Zakat"
+    },
+    {
+        "question": "Who was the first person to embrace Islam?",
+        "options": [
+            "1) Umar ibn al-Khattab",
+            "2) Abu Bakr",
+            "3) Ali ibn Abi Talib",
+            "4) Khadijah"
+        ],
+        "answer": "4) Khadijah"
+    },
+    {
+        "question": "Which Islamic month is considered the holiest of all?",
+        "options": [
+            "1) Ramadan",
+            "2) Shawwal",
+            "3) Dhul-Hijjah",
+            "4) Rajab"
+        ],
+        "answer": "1) Ramadan"
+    },
+    {
+        "question": "What does the term 'Haram' refer to in Islam?",
+        "options": [
+            "1) Permissible",
+            "2) Forbidden",
+            "3) Recommended",
+            "4) Neutral"
+        ],
+        "answer": "2) Forbidden"
+    },
+    {
+        "question": "How many chapters (Surahs) are there in the Quran?",
+        "options": [
+            "1) 114",
+            "2) 120",
+            "3) 105",
+            "4) 150"
+        ],
+        "answer": "1) 114"
+    },
+    {
+        "question": "Which surah is the longest in the Quran?",
+        "options": [
+            "1) Al-Baqarah",
+            "2) Al-Fatiha",
+            "3) Al-Imran",
+            "4) Al-Ahzab"
+        ],
+        "answer": "1) Al-Baqarah"
+    },
+    {
+        "question": "Which companion of the Prophet Muhammad (PBUH) was known as the 'Thun-Nurayn'?",
+        "options": [
+            "1) Umar ibn al-Khattab",
+            "2) Uthman ibn Affan",
+            "3) Ali ibn Abi Talib",
+            "4) Abu Huraira"
+        ],
+        "answer": "2) Uthman ibn Affan"
+    },
+    {
+        "question": "Which city is the second holiest city in Islam?",
+        "options": [
+            "1) Mecca",
+            "2) Medina",
+            "3) Jerusalem",
+            "4) Cairo"
+        ],
+        "answer": "2) Medina"
+    },
+    {
+        "question": "Who was the first caliph after Prophet Muhammad (PBUH)?",
+        "options": [
+            "1) Ali ibn Abi Talib",
+            "2) Umar ibn al-Khattab",
+            "3) Abu Bakr al-Siddiq",
+            "4) Uthman ibn Affan"
+        ],
+        "answer": "3) Abu Bakr al-Siddiq"
+    },
+    {
+        "question": "What does the term 'Halal' refer to in Islam?",
+        "options": [
+            "1) Forbidden",
+            "2) Permissible",
+            "3) Neutral",
+            "4) Recommended"
+        ],
+        "answer": "2) Permissible"
+    },
+    {
+        "question": "Who was the mother of Prophet Isa (Jesus)?",
+        "options": [
+            "1) Amina",
+            "2) Khadijah",
+            "3) Maryam (Mary)",
+            "4) Sarah"
+        ],
+        "answer": "3) Maryam (Mary)"
+    },
+    {
+        "question": "Which month is the Hajj pilgrimage performed?",
+        "options": [
+            "1) Ramadan",
+            "2) Shawwal",
+            "3) Dhul-Hijjah",
+            "4) Safar"
+        ],
+        "answer": "3) Dhul-Hijjah"
+    },
+    {
+        "question": "Which is the first surah of the Quran?",
+        "options": [
+            "1) Al-Baqarah",
+            "2) Al-Fatiha",
+            "3) Al-Imran",
+            "4) An-Nisa"
+        ],
+        "answer": "2) Al-Fatiha"
+    },
+    {
+        "question": "Which Prophet is known as the 'Father of the Prophets'?",
+        "options": [
+            "1) Prophet Ibrahim (Abraham)",
+            "2) Prophet Musa (Moses)",
+            "3) Prophet Muhammad (PBUH)",
+            "4) Prophet Isa (Jesus)"
+        ],
+        "answer": "1) Prophet Ibrahim (Abraham)"
     }
 ]

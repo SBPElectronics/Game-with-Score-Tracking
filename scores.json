@@ -23,6 +23,10 @@
         {
             "player_name": "2",
             "score": 1
+        },
+        {
+            "player_name": "",
+            "score": 5
         }
     ],
     "script": [
